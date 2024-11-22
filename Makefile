@@ -1,6 +1,6 @@
 # define the image name
 IMAGE_NAME = de_mini12
-DOCKER_ID_USER = nrutachoudhari
+DOCKER_USERNAME = nrutachoudhari
 
 # build the Docker image
 build:
@@ -22,8 +22,8 @@ container_show:
 
 push:
 	docker login
-	docker tag $(IMAGE_NAME) $(DOCKER_ID_USER)/$(IMAGE_NAME)
-	docker push $(DOCKER_ID_USER)/$(IMAGE_NAME):latest
+	docker tag $(IMAGE_NAME) $(DOCKER_USERNAME)/$(IMAGE_NAME)
+	docker push $(DOCKER_USERNAME)/$(IMAGE_NAME):latest
 
 login:
-	docker login -u ${DOCKER_ID_USER}
+	docker login -u ${DOCKER_USERNAME}
